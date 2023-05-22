@@ -1,0 +1,23 @@
+INSERT INTO `customer` (`customer_id`, `fname`, `Lname`, `password`, `phone`, `email`, `join_date`, `age`, `sex`, `ssn` , `license_number`) VALUES (1, 'Shimaa', 'Elsaqa', '123456', '12345678910', 'Elshimaa@gmail.com', current_timestamp(), '21', 'female', '11111111111111111111' , '55555555');
+
+INSERT INTO `customer` (`customer_id`, `fname`, `Lname`, `password`, `phone`, `email`, `join_date`, `age`, `sex`, `ssn`, `license_number`) VALUES (2, 'James', 'Carstairs', '234567', '23456789012', 'Jem@hotmail.com', current_timestamp(), '25', 'male', '22222222222222222222', '77777777');
+INSERT INTO `customer` (`customer_id`, `fname`, `Lname`, `password`, `phone`, `email`, `join_date`, `age`, `sex`, `ssn`, `license_number`) VALUES (NULL, 'yasmin', 'eshra', '12345678', '01147591017', 'yasmin@gmail.com', current_timestamp(), '21', 'female', '12345678912345', '123456789');
+INSERT INTO `car` (`plate_id`, `color`, `status`, `model`, `year`, `mileage`, `price_per_day`, `company`, `type`, `insurance`, `office_id`, `image`) VALUES ('12345', 'grey', 'rented', 'voyager', '2015', '1000', '500', 'BMW', 'minivan', '2000', '1', 'https://hips.hearstapps.com/hmg-prod/images/2022-chrysler-voyager-mmp-1-1633445515.jpg?crop=1.00xw:0.881xh;0,0.119xh&resize=640:*
+');
+
+INSERT INTO `car` (`plate_id`, `color`, `status`, `model`, `year`, `mileage`, `price_per_day`, `company`, `type`, `insurance`, `office_id`, `image`) VALUES ('23457', 'blue', 'active', 'Atlas', '2021', '500', '3000', 'volkswagen', 'convertible', '5000', '1'), ('34557', 'black', 'active', 'carnival', '2018', '1200', '900', 'kia', 'crossover', '1300', '2', 'https://www.vw.com/content/dam/onehub_pkw/us/en/showrooms/atlas/2023/mood-gallery/VW_NGW6_Showroom_Arteon_Collage_Large.jpg
+');
+
+INSERT INTO `car` (`plate_id`, `color`, `status`, `model`, `year`, `mileage`, `price_per_day`, `company`, `type`, `insurance`, `office_id`, `image`) VALUES ('46564', 'white', 'outofservice', 'escape', '2014', '900', '555', 'Ford', 'coupe', '2300', '1', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fshift.com%2Fcar%2F2019-white-ford-escape%2Fc1353774&psig=AOvVaw05kbG61-_ZI1mGSJ0kYFtJ&ust=1672336959716000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIiOvOXynPwCFQAAAAAdAAAAABAE');
+
+INSERT INTO `car` (`plate_id`, `color`, `status`, `model`, `year`, `mileage`, `price_per_day`, `company`, `type`, `insurance`, `office_id`, `image`) VALUES ('67890', 'red', 'rented', 'corvette', '2019', '2000', '650', 'volkswagen', 'sportscar', '3000', '2', 'https://www.motorious.com/content/images/2020/07/2020-chevrolet-corvette.jpg');
+
+INSERT INTO `office` (`office_id`, `city`, `address`) VALUES ('1', 'cairo', '13 El Mackryzy St. Mancheyet El Backry, Cairo');
+
+INSERT INTO `office` (`office_id`, `city`, `address`) VALUES ('2', 'London', '68 Alexander Road, London, SE35 2TU');
+
+INSERT INTO `reservation` (`customer_id`, `office_id`, `plate_id`, `total_cost`, `reserve_date`, `pickup_date`, `return_date`, `reservation_id`) VALUES ('1', '1', '12345', '500', '2022-12-08', '2022-12-09', '2022-12-10', 1);
+
+INSERT INTO `reservation` (`customer_id`, `office_id`, `plate_id`, `total_cost`, `reserve_date`, `pickup_date`, `return_date`, `reservation_id`) VALUES ('2', '2', '67890', '9750', '2022-11-02', '2022-12-01', '2022-12-15', 2);
+
+INSERT INTO `reservation` (`customer_id`, `office_id`, `plate_id`, `total_cost`, `reserve_date`, `pickup_date`, `return_date`, `reservation_id`, `payment_date`) VALUES ('1', '1', '12345', '500', '2022-12-11', '2022-12-13', '2022-12-14', NULL, NULL);

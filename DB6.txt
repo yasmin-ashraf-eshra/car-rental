@@ -1,0 +1,69 @@
+create database Car_Rental_Company
+CREATE TABLE customer (
+	customer_id int not null auto_increment,
+    	fname varchar(30),
+	Lname varchar(30),
+	password varchar(50),
+	phone varchar(30),
+	email varchar(50),
+	join_date timestamp default current_timestamp,
+	age int,
+	sex varchar(10),
+	ssn varchar(20),
+	license_number int,
+    	PRIMARY KEY(customer_id)
+);
+
+CREATE TABLE CAR (
+
+	plate_id varchar (10),
+	color varchar(50), 
+	status varchar(50),
+	model varchar(50),
+	`year` int,
+	mileage float,
+	price_per_day float,
+	company varchar(50),
+	type varchar(50),
+	insurance float,
+	office_id int,
+	image varchar(3000),
+	PRIMARY KEY(plate_id)
+ 
+);
+
+CREATE TABLE OFFICE (
+
+	office_id int not null auto_increment ,
+	city varchar(50),
+	address varchar(500),
+	PRIMARY KEY(office_id)
+
+);
+
+CREATE TABLE RESERVATION(
+	reservation_id int not null auto_increment,
+	customer_id int,
+	office_id int,
+	plate_id varchar (10),
+	total_cost float,
+	reserve_date date,
+	pickup_date date,
+	return_date date,
+	payment_date date,
+	PRIMARY KEY(customer_id,plate_id,pickup_date)
+
+
+);
+
+
+
+ALTER TABLE car
+ADD FOREIGN KEY (office_id) REFERENCES office (office_id);
+
+ALTER TABLE reservation
+ADD FOREIGN KEY (office_id) REFERENCES office (office_id),
+ADD FOREIGN KEY (customer_id) REFERENCES customer (customer_id),
+ADD FOREIGN KEY (plate_id) REFERENCES car(plate_id);
+
+
